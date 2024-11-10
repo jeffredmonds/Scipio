@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sandbox", "Sandbox\Sandbox.vcxproj", "{70749D51-225D-4630-A657-425718BEEB49}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Scipio", "Scipio\Scipio.vcxproj", "{90A18DDC-FCDB-4E29-A3A2-D25513037E8B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90A18DDC-FCDB-4E29-A3A2-D25513037E8B}.Debug|x64.ActiveCfg = Debug|x64
+		{90A18DDC-FCDB-4E29-A3A2-D25513037E8B}.Debug|x64.Build.0 = Debug|x64
+		{90A18DDC-FCDB-4E29-A3A2-D25513037E8B}.Release|x64.ActiveCfg = Release|x64
+		{90A18DDC-FCDB-4E29-A3A2-D25513037E8B}.Release|x64.Build.0 = Release|x64
+		{70749D51-225D-4630-A657-425718BEEB49}.Debug|x64.ActiveCfg = Debug|x64
+		{70749D51-225D-4630-A657-425718BEEB49}.Debug|x64.Build.0 = Debug|x64
+		{70749D51-225D-4630-A657-425718BEEB49}.Release|x64.ActiveCfg = Release|x64
+		{70749D51-225D-4630-A657-425718BEEB49}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F7C7D420-8D64-4DB1-BE90-652485F3C77C}
+	EndGlobalSection
+EndGlobal
