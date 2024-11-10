@@ -1,0 +1,3 @@
+[submodule "Scipio/vendor/spdlog"]
+	path = Scipio/vendor/spdlog
+	url = https://github.com/gabime/spdlog
