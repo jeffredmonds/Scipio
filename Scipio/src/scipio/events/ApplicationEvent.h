@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Scipio {
 
 	class SCIPIO_API WindowResizedEvent : public Event {
@@ -25,8 +23,8 @@ namespace Scipio {
 			return ss.str();
 		}
 
-		EVENT_CLASS_TYPE(WINDOW_RESIZED)
-		EVENT_CLASS_CATEGORY(EVENT_CATEGORY_APPLICATION)
+		EVENT_CLASS_TYPE(WindowResized)
+		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 
 	private:
 		unsigned int m_Width, m_Height;
@@ -37,8 +35,8 @@ namespace Scipio {
 	public:
 		WindowClosedEvent() {}
 
-		EVENT_CLASS_TYPE(WINDOW_CLOSED)
-		EVENT_CLASS_CATEGORY(EVENT_CATEGORY_APPLICATION)
+		EVENT_CLASS_TYPE(WindowClosed)
+		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 
 	};
 
@@ -47,8 +45,8 @@ namespace Scipio {
 	public:
 		AppTickEvent() {}
 
-		EVENT_CLASS_TYPE(APP_TICK)
-		EVENT_CLASS_CATEGORY(EVENT_CATEGORY_APPLICATION)
+		EVENT_CLASS_TYPE(AppTick)
+		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 
 	};
 
@@ -57,8 +55,8 @@ namespace Scipio {
 	public:
 		AppUpdateEvent() {}
 
-		EVENT_CLASS_TYPE(APP_UPDATE)
-		EVENT_CLASS_CATEGORY(EVENT_CATEGORY_APPLICATION)
+		EVENT_CLASS_TYPE(AppUpdate)
+		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 
 	};
 
@@ -67,8 +65,8 @@ namespace Scipio {
 	public:
 		AppRenderEvent() {}
 
-		EVENT_CLASS_TYPE(APP_RENDER)
-		EVENT_CLASS_CATEGORY(EVENT_CATEGORY_APPLICATION)
+		EVENT_CLASS_TYPE(AppRender)
+		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 
 	};
 }

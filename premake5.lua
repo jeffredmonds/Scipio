@@ -18,6 +18,9 @@ project "Scipio"
   targetdir ("bin/" .. outputdir .. "/%{prj.name}")
   objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+  pchheader "ScipioPrecompiledHeader.h"
+  pchsource "Scipio/src/ScipioPrecompiledHeader.cpp"
+
   files
   {
     "%{prj.name}/src/**.h",

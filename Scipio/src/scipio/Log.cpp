@@ -1,4 +1,5 @@
-﻿#include "Log.h"
+﻿#include "ScipioPrecompiledHeader.h"
+#include "Log.h"
 #include "spdlog/sinks/stdout_color_sinks.h"
 
 namespace Scipio {

@@ -10,6 +10,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Scipio.h" />
+    <ClInclude Include="src\ScipioPrecompiledHeader.h" />
     <ClInclude Include="src\scipio\Application.h">
       <Filter>scipio</Filter>
     </ClInclude>
@@ -22,11 +23,21 @@
     <ClInclude Include="src\scipio\Log.h">
       <Filter>scipio</Filter>
     </ClInclude>
+    <ClInclude Include="src\scipio\events\ApplicationEvent.h">
+      <Filter>scipio\events</Filter>
+    </ClInclude>
     <ClInclude Include="src\scipio\events\Event.h">
+      <Filter>scipio\events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scipio\events\KeyEvent.h">
+      <Filter>scipio\events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scipio\events\MouseEvent.h">
       <Filter>scipio\events</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\ScipioPrecompiledHeader.cpp" />
     <ClCompile Include="src\scipio\Application.cpp">
       <Filter>scipio</Filter>
     </ClCompile>

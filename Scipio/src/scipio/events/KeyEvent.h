@@ -1,8 +1,6 @@
 #pragma once
 
 #include "Event.h"
-#include <sstream>
-
 
 namespace Scipio {
 	class SCIPIO_API KeyEvent : public Event {
@@ -12,7 +10,7 @@ namespace Scipio {
 			return m_KeyCode;
 		}
 
-		EVENT_CLASS_CATEGORY(EVENT_CATEGORY_KEYBOARD | EVENT_CATEGORY_INPUT);
+		EVENT_CLASS_CATEGORY(EventCategoryKeyboard| EventCategoryInput);
 		
 	protected:
 		KeyEvent(int keycode) : m_KeyCode(keycode) {}

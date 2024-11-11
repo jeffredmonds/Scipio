@@ -1,3 +1,4 @@
+#include "ScipioPrecompiledHeader.h" 
 #include "Application.h"
 
 #include "scipio/events/ApplicationEvent.h"
@@ -15,11 +16,11 @@ namespace Scipio {
 
 		SP_TRACE("heck_ehck_theck");
 
-		if (e.isInCategory(EVENT_CATEGORY_APPLICATION))
+		if (e.isInCategory(EventCategoryApplication))
 		{
 			SP_TRACE(e.toString());
 		}
-		if (e.isInCategory(EVENT_CATEGORY_INPUT))
+		if (e.isInCategory(EventCategoryInput))
 		{
 			SP_TRACE(e.toString());
 		}

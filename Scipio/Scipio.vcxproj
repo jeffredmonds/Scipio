@@ -76,7 +76,8 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>ScipioPrecompiledHeader.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>SP_PLATFORM_WINDOWS;SP_BUILD_DLL;SP_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -98,7 +99,8 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>ScipioPrecompiledHeader.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>SP_PLATFORM_WINDOWS;SP_BUILD_DLL;SP_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -124,7 +126,8 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>ScipioPrecompiledHeader.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>SP_PLATFORM_WINDOWS;SP_BUILD_DLL;SP_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -150,16 +153,20 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\Scipio.h" />
+    <ClInclude Include="src\ScipioPrecompiledHeader.h" />
     <ClInclude Include="src\scipio\Application.h" />
     <ClInclude Include="src\scipio\Core.h" />
     <ClInclude Include="src\scipio\EntryPoint.h" />
+    <ClInclude Include="src\scipio\Log.h" />
     <ClInclude Include="src\scipio\events\ApplicationEvent.h" />
+    <ClInclude Include="src\scipio\events\Event.h" />
     <ClInclude Include="src\scipio\events\KeyEvent.h" />
     <ClInclude Include="src\scipio\events\MouseEvent.h" />
-    <ClInclude Include="src\scipio\Log.h" />
-    <ClInclude Include="src\scipio\events\Event.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\ScipioPrecompiledHeader.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="src\scipio\Application.cpp" />
     <ClCompile Include="src\scipio\Log.cpp" />
   </ItemGroup>
