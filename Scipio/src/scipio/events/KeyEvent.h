@@ -33,7 +33,7 @@ namespace Scipio {
 			return ss.str();
 		}
 
-		EVENT_CLASS_TYPE(KEY_PRESSED)
+		EVENT_CLASS_TYPE(KeyPressed)
 
 	private:
 		int m_RepeatCount;
@@ -50,6 +50,6 @@ namespace Scipio {
 			return ss.str();
 		}
 
-		EVENT_CLASS_TYPE(KEY_RELEASED)
+		EVENT_CLASS_TYPE(KeyReleased)
 	};
 }

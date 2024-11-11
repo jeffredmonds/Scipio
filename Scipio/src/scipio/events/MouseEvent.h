@@ -71,7 +71,7 @@ namespace Scipio {
 			return ss.str();
 		}
 
-		EVENT_CLASS_TYPE(MouseButtonRelased)
+		EVENT_CLASS_TYPE(MouseButtonReleased)
 
 	};
 }
