@@ -26,6 +26,7 @@ project "Scipio"
 
   includedirs
   {
+    "%{prj.name}/src",
     "%{prj.name}/vendor/spdlog/include"
   }
 
@@ -37,8 +38,7 @@ project "Scipio"
     defines
     {
       "SP_PLATFORM_WINDOWS",
-      "SP_BUILD_DLL",
-      "/utf-8"
+      "SP_BUILD_DLL"
     }
 
     postbuildcommands
@@ -93,8 +93,7 @@ project "Sandbox"
 
     defines
     {
-      "SP_PLATFORM_WINDOWS",
-      "/utf-8"
+      "SP_PLATFORM_WINDOWS"
     }
 
   filter "configurations:Debug"
