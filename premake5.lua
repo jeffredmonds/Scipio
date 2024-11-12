@@ -10,6 +10,13 @@ workspace "Scipio"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+
+-- Include directories relative to root folder (solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "Scipio/vendor/GLFW/include"
+include "Scipio/vendor/GLFW"
+
+
 project "Scipio"
   location "Scipio"
   kind "SharedLib"
@@ -30,7 +37,15 @@ project "Scipio"
   includedirs
   {
     "%{prj.name}/src",
-    "%{prj.name}/vendor/spdlog/include"
+    "%{prj.name}/vendor/spdlog/include",
+    "%{IncludeDir.GLFW}"
+  }
+
+  links
+  {
+    "GLFW",
+    "opengl32.lib",
+    "dwmapi.lib"
   }
 
   filter "system:windows"

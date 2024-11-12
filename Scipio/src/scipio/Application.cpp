@@ -4,25 +4,20 @@
 #include "scipio/events/ApplicationEvent.h"
 #include "scipio/Log.h"
 
+#include <GLFW/glfw3.h>
+
 namespace Scipio {
 
 	Application::Application() {
-
+		m_Window = std::unique_ptr<Window>(Window::create());
 	}
 
 	void Application::run() {
-
-		WindowResizedEvent e(1280, 720);
-
-		SP_TRACE("heck_ehck_theck");
-
-		if (e.isInCategory(EventCategoryApplication))
-		{
-			SP_TRACE(e.toString());
-		}
-		if (e.isInCategory(EventCategoryInput))
-		{
-			SP_TRACE(e.toString());
+	
+		while (m_Running) {
+			glClearColor(1, 0, 1, 1);
+			glClear(GL_COLOR_BUFFER_BIT);
+			m_Window->onUpdate();
 		}
 
 
