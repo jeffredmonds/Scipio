@@ -30,14 +30,13 @@ namespace Scipio {
 		unsigned int m_Width, m_Height;
 	};
 
-	class SCIPIO_API WindowClosedEvent : public Event {
+	class SCIPIO_API WindowCloseEvent : public Event {
 
 	public:
-		WindowClosedEvent() {}
+		WindowCloseEvent() {}
 
-		EVENT_CLASS_TYPE(WindowClosed)
+		EVENT_CLASS_TYPE(WindowClose)
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)
-
 	};
 
 	class SCIPIO_API AppTickEvent : public Event {
@@ -47,7 +46,6 @@ namespace Scipio {
 
 		EVENT_CLASS_TYPE(AppTick)
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)
-
 	};
 
 	class SCIPIO_API AppUpdateEvent : public Event{
@@ -57,7 +55,6 @@ namespace Scipio {
 
 		EVENT_CLASS_TYPE(AppUpdate)
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)
-
 	};
 
 	class SCIPIO_API AppRenderEvent : public Event{
@@ -67,6 +64,5 @@ namespace Scipio {
 
 		EVENT_CLASS_TYPE(AppRender)
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)
-
 	};
 }

@@ -8,9 +8,9 @@ namespace Scipio {
 	enum class EventType
 	{
 		None = 0,
-		WindowClosed, 
+		WindowClose, 
 		WindowResized, 
-		WidnowFocus,
+		WindowFocus,
 		WindowLostFocus,
 		WindowMoved,
 		AppTick,
