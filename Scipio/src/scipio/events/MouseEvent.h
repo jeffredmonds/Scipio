@@ -5,10 +5,10 @@
 
 namespace Scipio {
 
-	class SCIPIO_API MouseMoveEvent : public Event {
+	class SCIPIO_API MouseMovedEvent : public Event {
 
 	public:
-		MouseMoveEvent(float x, float y) : m_MouseX(x), m_MouseY(y) {}
+		MouseMovedEvent(float x, float y) : m_MouseX(x), m_MouseY(y) {}
 
 
 		inline float getX() const {
@@ -30,6 +30,34 @@ namespace Scipio {
 
 	private:
 		float m_MouseX, m_MouseY;
+	};
+
+	class SCIPIO_API MouseButtonScrolledEvent : public Event {
+
+	public:
+		MouseButtonScrolledEvent(float xOffset, float yOffset) : m_XOffset(xOffset), m_YOffset(yOffset) {}
+
+		inline float GetXOffset() const {
+			return m_XOffset;
+		}
+
+		inline float GetYOffset() const {
+			return m_YOffset;
+		}
+
+		std::string toString() const override {
+			std::stringstream ss;
+			ss << "MouseScrolledEvent: " << m_XOffset << ", " << m_YOffset;
+			return ss.str();
+		}
+
+		EVENT_CLASS_TYPE(MouseScrolled)
+		EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput)
+
+
+	private:
+		float m_XOffset, m_YOffset;
+
 	};
 
 	class SCIPIO_API MouseButtonEvent : public Event {
@@ -60,7 +88,7 @@ namespace Scipio {
 		EVENT_CLASS_TYPE(MouseButtonPressed)
 	};
 
-	class SCIPIO_API MouseButtonReleasedEvent : MouseButtonEvent {
+	class SCIPIO_API MouseButtonReleasedEvent : public MouseButtonEvent {
 
 	public:
 		MouseButtonReleasedEvent(int button) : MouseButtonEvent(button) {}
