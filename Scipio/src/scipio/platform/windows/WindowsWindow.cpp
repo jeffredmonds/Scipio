@@ -104,7 +104,6 @@ namespace Scipio {
 		glfwSetScrollCallback(m_Window, [](GLFWwindow* window, double xOffset, double yOffset) {
 			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
 
-			//TODO do I have a mouseScrolledEvent created??
 			MouseButtonScrolledEvent event((float)xOffset, (float)yOffset);
 			data.EventCallback(event);
 			});
