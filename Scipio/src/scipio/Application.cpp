@@ -14,11 +14,17 @@ namespace Scipio {
 		m_Window->setEventCallback(BIND_EVENT_FN(onEvent));
 	}
 
+
 	void Application::run() {
 	
 		while (m_Running) {
 			glClearColor(1, 0, 1, 1);
 			glClear(GL_COLOR_BUFFER_BIT);
+
+			for (Layer* layer : m_LayerStack) {
+				layer->onUpdate();
+			}
+
 			m_Window->onUpdate();
 		}
 	}
@@ -28,8 +34,20 @@ namespace Scipio {
 		EventDispatcher dispatcher(event);
 		dispatcher.dispatch<WindowCloseEvent>(BIND_EVENT_FN(OnWindowClose));
 
-		//debugging information 
-		SP_CORE_TRACE("{0}", event.toString());
+		for (auto it = m_LayerStack.end(); it != m_LayerStack.begin();) {
+			(*--it)->onEvent(event);
+			if (event.handled) {
+				break;
+			}
+		}
+	}
+
+	void Application::pushLayer(Layer* layer) {
+		m_LayerStack.pushLayer(layer);
+	}
+
+	void Application::pushOverlay(Layer* overlay) {
+		m_LayerStack.pushOverlay(overlay);
 	}
 
 	bool Application::OnWindowClose(WindowCloseEvent& event) {

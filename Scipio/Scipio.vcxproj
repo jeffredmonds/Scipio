@@ -84,7 +84,7 @@
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/MDd /utf-8 %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -111,7 +111,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/MD /utf-8 %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -139,7 +139,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/MD /utf-8 %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -160,6 +160,8 @@
     <ClInclude Include="src\scipio\Application.h" />
     <ClInclude Include="src\scipio\Core.h" />
     <ClInclude Include="src\scipio\EntryPoint.h" />
+    <ClInclude Include="src\scipio\Layer.h" />
+    <ClInclude Include="src\scipio\LayerStack.h" />
     <ClInclude Include="src\scipio\Log.h" />
     <ClInclude Include="src\scipio\Window.h" />
     <ClInclude Include="src\scipio\events\ApplicationEvent.h" />
@@ -173,6 +175,8 @@
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="src\scipio\Application.cpp" />
+    <ClCompile Include="src\scipio\Layer.cpp" />
+    <ClCompile Include="src\scipio\LayerStack.cpp" />
     <ClCompile Include="src\scipio\Log.cpp" />
     <ClCompile Include="src\scipio\platform\windows\WindowsWindow.cpp" />
   </ItemGroup>

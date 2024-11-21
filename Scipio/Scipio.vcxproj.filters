@@ -26,6 +26,12 @@
     <ClInclude Include="src\scipio\EntryPoint.h">
       <Filter>scipio</Filter>
     </ClInclude>
+    <ClInclude Include="src\scipio\Layer.h">
+      <Filter>scipio</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scipio\LayerStack.h">
+      <Filter>scipio</Filter>
+    </ClInclude>
     <ClInclude Include="src\scipio\Log.h">
       <Filter>scipio</Filter>
     </ClInclude>
@@ -51,6 +57,12 @@
   <ItemGroup>
     <ClCompile Include="src\ScipioPrecompiledHeader.cpp" />
     <ClCompile Include="src\scipio\Application.cpp">
+      <Filter>scipio</Filter>
+    </ClCompile>
+    <ClCompile Include="src\scipio\Layer.cpp">
+      <Filter>scipio</Filter>
+    </ClCompile>
+    <ClCompile Include="src\scipio\LayerStack.cpp">
       <Filter>scipio</Filter>
     </ClCompile>
     <ClCompile Include="src\scipio\Log.cpp">
