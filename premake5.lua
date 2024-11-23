@@ -14,7 +14,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "Scipio/vendor/GLFW/include"
+IncludeDir["Glad"] = "Scipio/vendor/Glad/include"
+
 include "Scipio/vendor/GLFW"
+include "Scipio/vendor/Glad"
 
 
 project "Scipio"
@@ -38,12 +41,14 @@ project "Scipio"
   {
     "%{prj.name}/src",
     "%{prj.name}/vendor/spdlog/include",
-    "%{IncludeDir.GLFW}"
+    "%{IncludeDir.GLFW}",
+    "%{IncludeDir.Glad}"
   }
 
   links
   {
     "GLFW",
+    "Glad",
     "opengl32.lib",
     "dwmapi.lib"
   }
@@ -56,7 +61,8 @@ project "Scipio"
     defines
     {
       "SP_PLATFORM_WINDOWS",
-      "SP_BUILD_DLL"
+      "SP_BUILD_DLL", 
+      "GLFW_INCLUDE_NONE"
     }
 
     postbuildcommands
