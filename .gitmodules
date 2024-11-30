@@ -4,3 +4,6 @@
 [submodule "Scipio/vendor/GLFW"]
 	path = Scipio/vendor/GLFW
 	url = https://github.com/jeffredmonds/glfw.git
+[submodule "Scipio/vendor/imgui"]
+	path = Scipio/vendor/imgui
+	url = https://github.com/jeffredmonds/imgui

@@ -20,6 +20,7 @@ class Sandbox : public Scipio::Application {
 public:
 	Sandbox() {
 		pushLayer(new TestLayer());
+		pushOverlay(new Scipio::ImGuiLayer());
 	}
 
 	~Sandbox() {

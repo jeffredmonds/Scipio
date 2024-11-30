@@ -7,4 +7,5 @@
 
 //---------Entry point-------------
 #include "scipio/EntryPoint.h"
+#include "scipio/imgui/ImGuiLayer.h"
 //---------------------------------

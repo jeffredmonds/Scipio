@@ -15,9 +15,11 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 IncludeDir = {}
 IncludeDir["GLFW"] = "Scipio/vendor/GLFW/include"
 IncludeDir["Glad"] = "Scipio/vendor/Glad/include"
+IncludeDir["ImGui"] = "Scipio/vendor/imgui"
 
 include "Scipio/vendor/GLFW"
 include "Scipio/vendor/Glad"
+include "Scipio/vendor/imgui"
 
 
 project "Scipio"
@@ -42,13 +44,16 @@ project "Scipio"
     "%{prj.name}/src",
     "%{prj.name}/vendor/spdlog/include",
     "%{IncludeDir.GLFW}",
-    "%{IncludeDir.Glad}"
+    "%{IncludeDir.Glad}",
+    "%{IncludeDir.ImGui}"
+
   }
 
   links
   {
     "GLFW",
     "Glad",
+    "ImGui",
     "opengl32.lib",
     "dwmapi.lib"
   }

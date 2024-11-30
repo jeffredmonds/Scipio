@@ -12,7 +12,7 @@ namespace Scipio {
 
 		virtual ~Layer();
 
-		virtual void onAttack() {}
+		virtual void onAttach() {}
 		virtual void onDetach() {}
 		virtual void onUpdate() {}
 		virtual void onEvent(Event& event) {}

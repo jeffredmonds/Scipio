@@ -7,8 +7,14 @@
     <Filter Include="scipio\events">
       <UniqueIdentifier>{B0F31FC8-1CB4-9BFE-E5EE-E47B516EE0DA}</UniqueIdentifier>
     </Filter>
+    <Filter Include="scipio\imgui">
+      <UniqueIdentifier>{967B6344-82DE-F2E8-2B64-2B9F17A6BE6B}</UniqueIdentifier>
+    </Filter>
     <Filter Include="scipio\platform">
       <UniqueIdentifier>{20A7096C-8C32-7730-9543-FA24014ED330}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scipio\platform\opengl">
+      <UniqueIdentifier>{B424040F-A01E-2D61-898B-C371752493CD}</UniqueIdentifier>
     </Filter>
     <Filter Include="scipio\platform\windows">
       <UniqueIdentifier>{7A09A447-E640-ECDE-EF4A-50025B0113D8}</UniqueIdentifier>
@@ -50,6 +56,12 @@
     <ClInclude Include="src\scipio\events\MouseEvent.h">
       <Filter>scipio\events</Filter>
     </ClInclude>
+    <ClInclude Include="src\scipio\imgui\ImGuiLayer.h">
+      <Filter>scipio\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scipio\platform\opengl\ImGuiOpenGLRenderer.h">
+      <Filter>scipio\platform\opengl</Filter>
+    </ClInclude>
     <ClInclude Include="src\scipio\platform\windows\WindowsWindow.h">
       <Filter>scipio\platform\windows</Filter>
     </ClInclude>
@@ -67,6 +79,12 @@
     </ClCompile>
     <ClCompile Include="src\scipio\Log.cpp">
       <Filter>scipio</Filter>
+    </ClCompile>
+    <ClCompile Include="src\scipio\imgui\ImGuiLayer.cpp">
+      <Filter>scipio\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\scipio\platform\opengl\ImGuiOpenGlRenderer.cpp">
+      <Filter>scipio\platform\opengl</Filter>
     </ClCompile>
     <ClCompile Include="src\scipio\platform\windows\WindowsWindow.cpp">
       <Filter>scipio\platform\windows</Filter>

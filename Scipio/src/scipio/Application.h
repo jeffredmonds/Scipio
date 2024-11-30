@@ -20,12 +20,17 @@ namespace Scipio {
 		void pushLayer(Layer* layer);
 		void pushOverlay(Layer* layer);
 
+		inline static Application& get() { return *s_Instance; }
+		inline Window& getWindow() { return *m_Window; }
 
 	private:
 		bool OnWindowClose(WindowCloseEvent& event);
 		std::unique_ptr<Window> m_Window;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
+
+	private:
+		static Application* s_Instance;
 	};
 
 	//To be defined in client
