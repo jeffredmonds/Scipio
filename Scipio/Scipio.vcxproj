@@ -170,6 +170,7 @@
     <ClInclude Include="src\scipio\events\MouseEvent.h" />
     <ClInclude Include="src\scipio\imgui\ImGuiLayer.h" />
     <ClInclude Include="src\scipio\platform\opengl\ImGuiOpenGLRenderer.h" />
+    <ClInclude Include="src\scipio\platform\opengl\imgui_impl_glfw.h" />
     <ClInclude Include="src\scipio\platform\windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
@@ -182,6 +183,7 @@
     <ClCompile Include="src\scipio\Log.cpp" />
     <ClCompile Include="src\scipio\imgui\ImGuiLayer.cpp" />
     <ClCompile Include="src\scipio\platform\opengl\ImGuiOpenGlRenderer.cpp" />
+    <ClCompile Include="src\scipio\platform\opengl\imgui_impl_glfw.cpp" />
     <ClCompile Include="src\scipio\platform\windows\WindowsWindow.cpp" />
   </ItemGroup>
   <ItemGroup>

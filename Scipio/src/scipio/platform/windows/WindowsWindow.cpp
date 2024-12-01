@@ -5,6 +5,8 @@
 #include "scipio/events/KeyEvent.h"
 #include "scipio/events/MouseEvent.h"
 
+#include "scipio/platform/opengl/ImGuiOpenGLRenderer.h"
+
 
 #include <glad/glad.h>
 
@@ -48,7 +50,6 @@ namespace Scipio {
 		SP_CORE_ASSERT(status, "Failed to initialize Glad! RIP")
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		setVSync(true);
-		
 
 		// Set up GLFW callbacks =====================================================================================
 		glfwSetWindowSizeCallback(m_Window, [](GLFWwindow* window, int width, int height) {
@@ -89,6 +90,13 @@ namespace Scipio {
 			}
 		});
 
+		glfwSetCharCallback(m_Window, [](GLFWwindow* window, unsigned int keycode) {
+			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
+
+			KeyTypedEvent event(keycode);
+			data.EventCallback(event);
+			});
+
 		glfwSetMouseButtonCallback(m_Window, [](GLFWwindow* window, int button, int action, int mods) {
 			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
 
@@ -109,7 +117,7 @@ namespace Scipio {
 		glfwSetScrollCallback(m_Window, [](GLFWwindow* window, double xOffset, double yOffset) {
 			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
 
-			MouseButtonScrolledEvent event((float)xOffset, (float)yOffset);
+			MouseScrolledEvent event((float)xOffset, (float)yOffset);
 			data.EventCallback(event);
 			});
 

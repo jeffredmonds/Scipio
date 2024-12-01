@@ -62,6 +62,9 @@
     <ClInclude Include="src\scipio\platform\opengl\ImGuiOpenGLRenderer.h">
       <Filter>scipio\platform\opengl</Filter>
     </ClInclude>
+    <ClInclude Include="src\scipio\platform\opengl\imgui_impl_glfw.h">
+      <Filter>scipio\platform\opengl</Filter>
+    </ClInclude>
     <ClInclude Include="src\scipio\platform\windows\WindowsWindow.h">
       <Filter>scipio\platform\windows</Filter>
     </ClInclude>
@@ -84,6 +87,9 @@
       <Filter>scipio\imgui</Filter>
     </ClCompile>
     <ClCompile Include="src\scipio\platform\opengl\ImGuiOpenGlRenderer.cpp">
+      <Filter>scipio\platform\opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="src\scipio\platform\opengl\imgui_impl_glfw.cpp">
       <Filter>scipio\platform\opengl</Filter>
     </ClCompile>
     <ClCompile Include="src\scipio\platform\windows\WindowsWindow.cpp">
