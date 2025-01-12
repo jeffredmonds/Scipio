@@ -26,6 +26,7 @@ project "Scipio"
   location "Scipio"
   kind "SharedLib"
   language "C++"
+  staticruntime "off"
 
   targetdir ("bin/" .. outputdir .. "/%{prj.name}")
   objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -60,7 +61,6 @@ project "Scipio"
 
   filter "system:windows"
     cppdialect"C++20"
-    staticruntime "On"
     systemversion "latest"
 
     defines
@@ -77,17 +77,17 @@ project "Scipio"
 
   filter "configurations:Debug"
     defines "SP_DEBUG"
-    buildoptions "/MDd"
+    runtime "debug"
     symbols "On"
 
   filter "configurations:Release"
     defines "SP_RELEASE"
-    buildoptions "/MD"
+    runtime "release"
     optimize "On"
 
   filter "configurations:dist"
     defines "SP_DIST"
-    buildoptions "/MD"
+    runtime "release"
     optimize "On"
 
   filter { "action:vs*" }
@@ -97,6 +97,7 @@ project "Sandbox"
   location "Sandbox"
   kind "ConsoleApp"
   language "C++"
+  staticruntime "off"
 
   targetdir ("bin/" .. outputdir .. "/%{prj.name}")
   objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -120,7 +121,6 @@ project "Sandbox"
 
   filter "system:windows"
     cppdialect"C++20"
-    staticruntime "On"
     systemversion "latest"
 
     defines
@@ -130,17 +130,17 @@ project "Sandbox"
 
   filter "configurations:Debug"
     defines "SP_DEBUG"
-    buildoptions "/MDd"
+    runtime "debug"
     symbols "On"
 
   filter "configurations:Release"
     defines "SP_RELEASE"
-    buildoptions "/MD"
+    runtime "release"
     optimize "On"
 
   filter "configurations:Dist"
     defines "SP_DIST"
-    buildoptions "/MD"
+    runtime "release"
     optimize "On"
 
   filter { "action:vs*" }

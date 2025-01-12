@@ -10,9 +10,13 @@
 	#error Scipio only supports Windows
 #endif
 
+#ifdef SP_DEBUG
+	#define	SP_ENABLE_ASSERTS
+#endif
+
 #ifdef SP_ENABLE_ASSERTS
-	#DEFINE SP_ASSERT(x, ...) { if(!(x)) { SP_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
-	#DEFINE SP_CORE_ASSERT(x, ...) { if (!(x)) { SP_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
+	#define SP_ASSERT(x, ...) { if(!(x)) { SP_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
+	#define SP_CORE_ASSERT(x, ...) { if (!(x)) { SP_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
 #else
 	#define SP_ASSERT(x, ...)
 	#define SP_CORE_ASSERT(x, ...)

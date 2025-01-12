@@ -83,8 +83,8 @@
       <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <AdditionalOptions>/MDd /utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -110,8 +110,8 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <AdditionalOptions>/MD /utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -138,8 +138,8 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <AdditionalOptions>/MD /utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -160,9 +160,13 @@
     <ClInclude Include="src\scipio\Application.h" />
     <ClInclude Include="src\scipio\Core.h" />
     <ClInclude Include="src\scipio\EntryPoint.h" />
+    <ClInclude Include="src\scipio\Input.h" />
+    <ClInclude Include="src\scipio\KeyCodes.h" />
     <ClInclude Include="src\scipio\Layer.h" />
     <ClInclude Include="src\scipio\LayerStack.h" />
     <ClInclude Include="src\scipio\Log.h" />
+    <ClInclude Include="src\scipio\MouseButtonCodes.h" />
+    <ClInclude Include="src\scipio\platform\windows\WindowsInput.h" />
     <ClInclude Include="src\scipio\Window.h" />
     <ClInclude Include="src\scipio\events\ApplicationEvent.h" />
     <ClInclude Include="src\scipio\events\Event.h" />
@@ -184,6 +188,7 @@
     <ClCompile Include="src\scipio\imgui\ImGuiLayer.cpp" />
     <ClCompile Include="src\scipio\platform\opengl\ImGuiOpenGlRenderer.cpp" />
     <ClCompile Include="src\scipio\platform\opengl\imgui_impl_glfw.cpp" />
+    <ClCompile Include="src\scipio\platform\windows\WindowsInput.cpp" />
     <ClCompile Include="src\scipio\platform\windows\WindowsWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
