@@ -117,6 +117,7 @@ project "Sandbox"
   {
     "Scipio/vendor/spdlog/include",
     "Scipio/src",
+    "Scipio/vendor",
     "%{IncludeDir.glm}"
   }
 

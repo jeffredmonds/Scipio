@@ -16,9 +16,6 @@
     <Filter Include="src\scipio\platform">
       <UniqueIdentifier>{37CE7186-A32F-4F94-2C9D-954698FD8553}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\scipio\platform\opengl">
-      <UniqueIdentifier>{EB8BC4A5-D79B-7076-4055-D5942C845F0F}</UniqueIdentifier>
-    </Filter>
     <Filter Include="src\scipio\platform\windows">
       <UniqueIdentifier>{915771B6-FD64-9F9C-864B-9B87F2576B53}</UniqueIdentifier>
     </Filter>
@@ -95,12 +92,6 @@
     </ClInclude>
     <ClInclude Include="src\scipio\imgui\ImGuiLayer.h">
       <Filter>src\scipio\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="src\scipio\platform\opengl\ImGuiOpenGLRenderer.h">
-      <Filter>src\scipio\platform\opengl</Filter>
-    </ClInclude>
-    <ClInclude Include="src\scipio\platform\opengl\imgui_impl_glfw.h">
-      <Filter>src\scipio\platform\opengl</Filter>
     </ClInclude>
     <ClInclude Include="src\scipio\platform\windows\WindowsInput.h">
       <Filter>src\scipio\platform\windows</Filter>
@@ -1373,14 +1364,11 @@
     <ClCompile Include="src\scipio\Log.cpp">
       <Filter>src\scipio</Filter>
     </ClCompile>
-    <ClCompile Include="src\scipio\imgui\ImGuiLayer.cpp">
+    <ClCompile Include="src\scipio\imgui\ImGuiBuild.cpp">
       <Filter>src\scipio\imgui</Filter>
     </ClCompile>
-    <ClCompile Include="src\scipio\platform\opengl\ImGuiOpenGlRenderer.cpp">
-      <Filter>src\scipio\platform\opengl</Filter>
-    </ClCompile>
-    <ClCompile Include="src\scipio\platform\opengl\imgui_impl_glfw.cpp">
-      <Filter>src\scipio\platform\opengl</Filter>
+    <ClCompile Include="src\scipio\imgui\ImGuiLayer.cpp">
+      <Filter>src\scipio\imgui</Filter>
     </ClCompile>
     <ClCompile Include="src\scipio\platform\windows\WindowsInput.cpp">
       <Filter>src\scipio\platform\windows</Filter>

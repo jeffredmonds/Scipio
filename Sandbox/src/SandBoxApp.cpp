@@ -1,6 +1,5 @@
 #include <Scipio.h>
 
-
 class TestLayer : public Scipio::Layer {
 public:
 	
@@ -17,6 +16,7 @@ public:
 	void onEvent(Scipio::Event& event) override {
 		//SP_TRACE("{0}", event.toString());
 	}
+
 };
 
 
@@ -24,7 +24,6 @@ class Sandbox : public Scipio::Application {
 public:
 	Sandbox() {
 		pushLayer(new TestLayer());
-		pushOverlay(new Scipio::ImGuiLayer());
 	}
 
 	~Sandbox() {

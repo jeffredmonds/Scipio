@@ -5,9 +5,6 @@
 #include "scipio/events/KeyEvent.h"
 #include "scipio/events/MouseEvent.h"
 
-#include "scipio/platform/opengl/ImGuiOpenGLRenderer.h"
-
-
 #include <glad/glad.h>
 
 namespace Scipio {
